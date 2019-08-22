@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Engineering,Git,Config,">
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yuchen Cao">
-<meta property="og:url" content="https://yuchenc1.github.io/archives/2019/08/index.html">
+<meta name="description" content="When I started my first full-time software engineer job at Snowflake Computing, I felt that the speed of typing terminal commands is very annoying. Sometimes it took more than 2 seconds to finish the">
+<meta name="keywords" content="Engineering,Git,Config">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git Config">
+<meta property="og:url" content="https://yuchenc1.github.io/2019/08/21/Git-Config/index.html">
 <meta property="og:site_name" content="Yuchen Cao">
+<meta property="og:description" content="When I started my first full-time software engineer job at Snowflake Computing, I felt that the speed of typing terminal commands is very annoying. Sometimes it took more than 2 seconds to finish the">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-22T04:38:31.432Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yuchen Cao">
+<meta name="twitter:title" content="Git Config">
+<meta name="twitter:description" content="When I started my first full-time software engineer job at Snowflake Computing, I felt that the speed of typing terminal commands is very annoying. Sometimes it took more than 2 seconds to finish the">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://yuchenc1.github.io/archives/2019/08/">
+  <link rel="canonical" href="https://yuchenc1.github.io/2019/08/21/Git-Config/">
 
 
 
 
 
-  <title>Archive | Yuchen Cao</title>
+  <title>Git Config | Yuchen Cao</title>
   
 
 
@@ -140,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,107 +219,178 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        Um..! 2 posts in total. Keep on posting.
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yuchenc1.github.io/2019/08/21/Git-Config/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yuchen Cao">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yuchen Cao">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/08/21/Git-Config/" itemprop="url">
-              
-                <span itemprop="name">Git Config</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Git Config</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-21T21:28:00-07:00" content="2019-08-21">
-          08-21
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-21T21:28:00-07:00">
+                2019-08-21
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Conf/" itemprop="url" rel="index">
+                    <span itemprop="name">Conf</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>When I started my first full-time software engineer job at Snowflake Computing, I felt that the speed of typing terminal commands is very annoying. Sometimes it took more than 2 seconds to finish the command. Finally I found the reason is that I was using zsh. Zsh has the git plugin and it will scan the dirty change after running each command. Snowflake Computing is using a big shared repository, so it is very expensive to scan the whole repo. The only thing I need to do is:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global --add oh-my-zsh.hide-dirty 0</span><br><span class="line"><span class="comment"># --global is added for chaning the config for all git repos</span></span><br></pre></td></tr></table></figure>
+
+<p>Below is some personal shortcut of git usage. This may help save some time.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global alias.br branch</span><br><span class="line">$ git config --global alias.a add</span><br><span class="line">$ git config --global alias.d diff</span><br><span class="line">$ git config --global alias.ci commit</span><br><span class="line">$ git config --global alias.st status</span><br><span class="line">$ git config --global alias.s show</span><br><span class="line">$ git config --global alias.pl pull</span><br><span class="line">$ git config --global alias.ps push</span><br><span class="line">$ git config --global alias.rb rebase</span><br><span class="line">$ git config --global alias.cp cherry-pick</span><br><span class="line">$ git config --global alias.l <span class="built_in">log</span></span><br><span class="line">$ git config --global alias.co checkout</span><br></pre></td></tr></table></figure>
 
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/15/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-15T14:03:48-07:00" content="2019-08-15">
-          08-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Engineering/" rel="tag"># Engineering</a>
+          
+            <a href="/tags/Git/" rel="tag"># Git</a>
+          
+            <a href="/tags/Config/" rel="tag"># Config</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/15/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -322,6 +398,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -577,6 +657,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
