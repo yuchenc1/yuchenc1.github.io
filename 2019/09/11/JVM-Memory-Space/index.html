@@ -118,7 +118,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Engineering,Java,">
 
 
 
@@ -129,16 +129,18 @@
 
 
 
-<meta name="description" content="Software Engineer @ Snowflake Computing || Master of Computer Science @ Carnegie Mellon University || Bachlor of Mathematics @ Zhejiang University">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yuchen Cao">
-<meta property="og:url" content="https://yuchenc1.github.io/tags/Zsh/index.html">
+<meta name="description" content="I start to write this post because I have been assigned a ticket at work. My mentor wanted me to collect some heap stats when the JVM old-gen memory usage is beyond threshold%. When I first lookat at">
+<meta name="keywords" content="Engineering,Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JVM Memory Space">
+<meta property="og:url" content="https://yuchenc1.github.io/2019/09/11/JVM-Memory-Space/index.html">
 <meta property="og:site_name" content="Yuchen Cao">
-<meta property="og:description" content="Software Engineer @ Snowflake Computing || Master of Computer Science @ Carnegie Mellon University || Bachlor of Mathematics @ Zhejiang University">
+<meta property="og:description" content="I start to write this post because I have been assigned a ticket at work. My mentor wanted me to collect some heap stats when the JVM old-gen memory usage is beyond threshold%. When I first lookat at">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-09-12T00:05:17.334Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yuchen Cao">
-<meta name="twitter:description" content="Software Engineer @ Snowflake Computing || Master of Computer Science @ Carnegie Mellon University || Bachlor of Mathematics @ Zhejiang University">
+<meta name="twitter:title" content="JVM Memory Space">
+<meta name="twitter:description" content="I start to write this post because I have been assigned a ticket at work. My mentor wanted me to collect some heap stats when the JVM old-gen memory usage is beyond threshold%. When I first lookat at">
 
 
 
@@ -168,13 +170,13 @@
 
 
 
-  <link rel="canonical" href="https://yuchenc1.github.io/tags/Zsh/">
+  <link rel="canonical" href="https://yuchenc1.github.io/2019/09/11/JVM-Memory-Space/">
 
 
 
 
 
-  <title>Tag: Zsh | Yuchen Cao</title>
+  <title>JVM Memory Space | Yuchen Cao</title>
   
 
 
@@ -193,7 +195,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -267,52 +269,181 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Zsh<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yuchenc1.github.io/2019/09/11/JVM-Memory-Space/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yuchen Cao">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/static/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yuchen Cao">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/08/26/Zsh-Config/" itemprop="url">
-              
-                <span itemprop="name">Zsh Config</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">JVM Memory Space</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-26T19:44:43-07:00" content="2019-08-26">
-          08-26
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-11T15:36:06-07:00">
+                2019-09-11
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Engineering/" itemprop="url" rel="index">
+                    <span itemprop="name">Engineering</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>I start to write this post because I have been assigned a ticket at work. My mentor wanted me to collect some heap stats when the JVM old-gen memory usage is beyond threshold%. When I first lookat at this ticket, what is old-gen? So I began searching for more info about it and write a post to help me understand and review in the future.</p>
+<p>JVM memory space is divided into two parts: HEAP and non-HEAP.</p>
+<p>HEAP space could be divided into three parts: Eden Space, Survivor Space, Old-gen.</p>
+<p>Non-HEAP space could be divided into Code Cache, Perm Gen, JVM Stack, Local Method Stack.</p>
+<p>Eden Space: As the meaning of the name, when an object is created, it is placed into this space at first. After GC(garbage collection), objects which cannot be reclaimed would be thrown into Survivor Space.</p>
+<p>Survivor Space: As we can see from Eden Space, objects which cannot be reclaimed in Eden Space during GC would be put in this space. There are two Survivor Space: To Survivor and From Survivor, with the same size. To Survivor would always be empty. Objects cannot be reclaimed during GC would be thrown into To Survivor. These objects came from not only Eden Space, but also From Survivor. You may be curious that I have mentioned To Survivor would always be empty. But we just throw some objects into it. This is because after each iteration, To Survivor and From Survivor would exchange to make sure To Survivor would always be empty.</p>
+<p>Eden Space and Survivor Space are both classified into New-gen. GC in New-gen is called Minor GC or Young GC. The age of objects would be recorded.</p>
+<p>Old-gen is to store objects that are still alive after many GC. Also large objects that cannot be allocated would enter Old-gen directly. Once Olg-gen is full, virtual machine would do a GC called Major GC. It is also called Full GC because it will scan the whole heap and reclaim.</p>
+<p>The size of HEAP = the size of Old-gen + the size of New-gen. </p>
+<p>Code cache is used to store the code compiled by JIT. Its size is set as 32M by default in client mode, 48M in server mode. It could be changed by changing JVM parameter. Code cache may be full and if it was full, there would be a warning message.</p>
+<p>Perm Gen is to store the information about Class and Meta. Class would be put into this space when loaded. It would be never be reclaimed during GC.</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Engineering/" rel="tag"># Engineering</a>
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/26/Zsh-Config/" rel="next" title="Zsh Config">
+                <i class="fa fa-chevron-left"></i> Zsh Config
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -320,6 +451,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -583,6 +718,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
